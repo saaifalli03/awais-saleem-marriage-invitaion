@@ -461,6 +461,40 @@ body[data-lang="ur"] .section-title {
   margin-bottom: 34px;
 }
 
+/* ---------- Quranic verse ---------- */
+
+.verse {
+  text-align: center;
+}
+
+.verse-arabic {
+  font-family: 'Amiri Quran', serif;
+  font-size: 30px;
+  line-height: 2;
+  color: var(--wine);
+  margin: 0 0 14px;
+}
+
+.verse-text {
+  font-size: 18px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 auto 10px;
+  max-width: 460px;
+}
+
+body[data-lang="ur"] .verse-text {
+  font-style: normal;
+  font-size: 17px;
+}
+
+.verse-ref {
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  margin: 0;
+}
+
 /* ---------- Countdown ---------- */
 
 .countdown {

@@ -17,12 +17,13 @@ const translations = {
     "cover.invited": "You are invited",
     "card.names": "Saira & Awais",
     "cover.opening": "Opening your invitation...",
-    "hero.date.b": "Friday, 23 October 2026",
-    "hero.date.mb": "21 — 23 October 2026",
+    "hero.date.w": "Sunday, 25 October 2026",
     "hero.date.bw": "23 — 25 October 2026",
     "schedule.title.1": "The celebration",
     "schedule.title.2": "Two days of celebration",
     "schedule.lede.1": "We look forward to seeing you",
+    "verse.text": "“And among His signs is that He created for you spouses from among yourselves, so that you may find tranquillity in them.”",
+    "verse.ref": "Surah Ar-Rum 30:21",
     "countdown.title": "Counting down",
     "countdown.lede": "until the celebrations begin",
     "countdown.days": "days",
@@ -59,12 +60,13 @@ const translations = {
     "cover.invited": "آپ مدعو ہیں",
     "card.names": "سائرہ اور اویس",
     "cover.opening": "دعوت نامہ کھل رہا ہے...",
-    "hero.date.b": "جمعہ، 23 اکتوبر 2026",
-    "hero.date.mb": "21 — 23 اکتوبر 2026",
+    "hero.date.w": "اتوار، 25 اکتوبر 2026",
     "hero.date.bw": "23 — 25 اکتوبر 2026",
     "schedule.title.1": "شادی کی تقریب",
     "schedule.title.2": "دو دن کی خوشیاں",
     "schedule.lede.1": "ہمیں آپ کا انتظار رہے گا",
+    "verse.text": "”اور اس کی نشانیوں میں سے یہ ہے کہ اس نے تمہارے لیے تمہاری ہی جنس سے جوڑے بنائے تاکہ تم ان سے سکون پاؤ۔“",
+    "verse.ref": "سورۃ الروم، آیت 21",
     "countdown.title": "الٹی گنتی",
     "countdown.lede": "تقریبات کے آغاز تک",
     "countdown.days": "دن",
@@ -99,33 +101,32 @@ const translations = {
 
 // ---------------------------------------------------------------------------
 // Which events to show, from the URL:
-//   /            -> Barat only
-//   ?M           -> Mehndi + Barat        (also ?e=M)
-//   ?W           -> Barat + Walima        (also ?e=W)
-//   ?M&W / ?MW   -> all three events      (also ?e=MW)
+//   /            -> Walima only
+//   ?B           -> Barat + Walima        (also ?e=B)
+//   ?M           -> Mehndi + Walima       (also ?e=M)
+//   ?B&M / ?BM   -> all three events      (also ?e=BM)
 // ---------------------------------------------------------------------------
 function readEventFlags() {
   const tokens = [];
   new URLSearchParams(window.location.search).forEach((value, key) => {
     if (["e", "events", "event"].includes(key.toLowerCase())) tokens.push(value);
-    else if (/^[mw]+$/i.test(key)) tokens.push(key);
+    else if (/^[bm]+$/i.test(key)) tokens.push(key);
   });
   const letters = tokens.join("").toUpperCase();
-  return { mehndi: letters.includes("M"), walima: letters.includes("W") };
+  return { mehndi: letters.includes("M"), barat: letters.includes("B") };
 }
 
 const SHOW = readEventFlags();
 
 (function applyEventVisibility() {
   document.querySelector('[data-event="mehndi"]').hidden = !SHOW.mehndi;
-  document.querySelector('[data-event="walima"]').hidden = !SHOW.walima;
+  document.querySelector('[data-event="barat"]').hidden = !SHOW.barat;
 
-  const count = 1 + Number(SHOW.mehndi) + Number(SHOW.walima);
+  const count = 1 + Number(SHOW.mehndi) + Number(SHOW.barat);
   const dateKey =
-    count === 3 ? "hero.date"
-    : SHOW.mehndi ? "hero.date.mb"
-    : SHOW.walima ? "hero.date.bw"
-    : "hero.date.b";
+    SHOW.mehndi ? "hero.date"
+    : SHOW.barat ? "hero.date.bw"
+    : "hero.date.w";
   document.getElementById("hero-date").setAttribute("data-i18n", dateKey);
   document.getElementById("schedule-title").setAttribute(
     "data-i18n",
@@ -244,10 +245,12 @@ envelope.addEventListener("click", openInvitation);
 
 // ---------------------------------------------------------------------------
 // Countdown to the first event the guest is invited to
-// (Mehndi 21 Oct 7 PM PKT if shown, otherwise Barat 23 Oct 1 PM PKT)
+// (Mehndi 21 Oct 7 PM PKT, else Barat 23 Oct 1 PM PKT, else Walima 25 Oct 7 PM PKT)
 // ---------------------------------------------------------------------------
 const countdownTarget = new Date(
-  SHOW.mehndi ? "2026-10-21T19:00:00+05:00" : "2026-10-23T13:00:00+05:00",
+  SHOW.mehndi ? "2026-10-21T19:00:00+05:00"
+  : SHOW.barat ? "2026-10-23T13:00:00+05:00"
+  : "2026-10-25T19:00:00+05:00",
 ).getTime();
 const cdEls = {
   d: document.getElementById("cdDays"),

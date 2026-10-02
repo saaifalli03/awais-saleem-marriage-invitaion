@@ -18,13 +18,13 @@ npx serve .
 
 ## Choosing which events a guest sees
 
-The invitation is one link; add a query string to control the events shown. Barat is always shown.
+The invitation is one link; add a query string to control the events shown. Walima is always shown.
 
 | URL | Events shown |
 | --- | --- |
-| `yoursite.vercel.app/` | Barat |
-| `yoursite.vercel.app/?M` | Mehndi + Barat |
-| `yoursite.vercel.app/?W` | Barat + Walima |
-| `yoursite.vercel.app/?M&W` (or `?MW`) | Mehndi + Barat + Walima |
+| `yoursite.vercel.app/` | Walima |
+| `yoursite.vercel.app/?B` | Barat + Walima |
+| `yoursite.vercel.app/?M` | Mehndi + Walima |
+| `yoursite.vercel.app/?B&M` (or `?BM`) | Mehndi + Barat + Walima |
 
-`?e=M`, `?e=W` and `?e=MW` work too. The date line, section title and countdown adjust automatically. Deploy as a static site on Vercel; no config needed.
+`?e=B`, `?e=M` and `?e=BM` work too. The date line, section title and countdown adjust automatically. Deploy as a static site on Vercel; no config needed.
