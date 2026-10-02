@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------------------
 // EDIT THESE — your WhatsApp number (with country code, no + or spaces) and message
 // ---------------------------------------------------------------------------
-const WHATSAPP_NUMBER = "923016312462"; // e.g. 92 for Pakistan + number, no leading 0
+const WHATSAPP_NUMBER = "923134791171"; // e.g. 92 for Pakistan + number, no leading 0
 const WHATSAPP_MESSAGE = {
   en: "Assalamualaikum! I'd love to confirm my attendance at your wedding. 🌸",
   ur: "السلام علیکم! میں آپ کی شادی میں شرکت کی تصدیق کرنا چاہتا/چاہتی ہوں۔ 🌸",
@@ -15,11 +15,11 @@ const translations = {
     "cover.label": "the wedding of",
     "cover.cue": "Tap the seal to open",
     "cover.invited": "You are invited",
-    "card.names": "Sama & Asad",
+    "card.names": "Saira & Awais",
     "cover.opening": "Opening your invitation...",
-    "hero.date.b": "Saturday, 31 October 2026",
-    "hero.date.mb": "30 — 31 October 2026",
-    "hero.date.bw": "31 October — 1 November 2026",
+    "hero.date.b": "Friday, 23 October 2026",
+    "hero.date.mb": "21 — 23 October 2026",
+    "hero.date.bw": "23 — 25 October 2026",
     "schedule.title.1": "The celebration",
     "schedule.title.2": "Two days of celebration",
     "schedule.lede.1": "We look forward to seeing you",
@@ -33,36 +33,35 @@ const translations = {
     "schedule.lede": "Everyone is welcome at every event",
     "rsvp.title": "Join the celebration",
     "hero.eyebrow": "Together with their families",
-    "hero.bride": "Sama Rafaqat",
-    "hero.groom": "Asad Ali",
-    "hero.date": "30 October — 1 November 2026",
+    "hero.bride": "Saira Riaz",
+    "hero.groom": "Awais Saleem",
+    "hero.date": "21 — 25 October 2026",
     "hero.tagline": "request the honour of your presence",
     "mehndi.title": "Mehndi",
-    "mehndi.date": "Friday, 30 October 2026",
+    "mehndi.date": "Wednesday, 21 October 2026",
     "mehndi.time": "7:00 PM – 10:00 PM",
-    "mehndi.venue": "Narrowal",
-    "mehndi.venue.a": "Sarangpur",
+    "mehndi.venue": "Gujranwala",
     "barat.title": "Barat",
-    "barat.date": "Saturday, 31 October 2026",
-    "barat.time": "12:00 PM – 4:00 PM",
-    "barat.venue": "JMK Marquee, New Lahore Road, Narowal",
+    "barat.date": "Friday, 23 October 2026",
+    "barat.time": "1:00 PM – 4:00 PM",
     "walima.title": "Walima",
-    "walima.date": "Sunday, 1 November 2026",
-    "walima.time": "12:00 PM – 4:00 PM",
-    "walima.venue": "Ghouri Marquee, Pasrur Road, Chawinda",
+    "walima.date": "Sunday, 25 October 2026",
+    "walima.time": "7:00 PM – 10:00 PM",
+    "walima.venue": "Alhamd Marquee, Nowshera Sansi, Gujranwala",
+    "map.link": "View location",
     "rsvp.text": "We would be honoured to celebrate with you",
     "rsvp.button": "Send RSVP on WhatsApp",
-    "footer.text": "With love, Sama & Asad",
+    "footer.text": "With love, Saira & Awais",
   },
   ur: {
     "cover.label": "شادی کی دعوت",
     "cover.cue": "کھولنے کے لیے مہر کو چھوئیں",
     "cover.invited": "آپ مدعو ہیں",
-    "card.names": "سما اور اسد",
+    "card.names": "سائرہ اور اویس",
     "cover.opening": "دعوت نامہ کھل رہا ہے...",
-    "hero.date.b": "ہفتہ، 31 اکتوبر 2026",
-    "hero.date.mb": "30 — 31 اکتوبر 2026",
-    "hero.date.bw": "31 اکتوبر — 1 نومبر 2026",
+    "hero.date.b": "جمعہ، 23 اکتوبر 2026",
+    "hero.date.mb": "21 — 23 اکتوبر 2026",
+    "hero.date.bw": "23 — 25 اکتوبر 2026",
     "schedule.title.1": "شادی کی تقریب",
     "schedule.title.2": "دو دن کی خوشیاں",
     "schedule.lede.1": "ہمیں آپ کا انتظار رہے گا",
@@ -76,26 +75,25 @@ const translations = {
     "schedule.lede": "ہر تقریب میں آپ کا خیر مقدم ہے",
     "rsvp.title": "خوشیوں میں شریک ہوں",
     "hero.eyebrow": "دونوں خاندانوں کی طرف سے",
-    "hero.bride": "سما رفاقت",
-    "hero.groom": "اسد علی",
-    "hero.date": "30 اکتوبر — 1 نومبر 2026",
+    "hero.bride": "سائرہ ریاض",
+    "hero.groom": "اویس سلیم",
+    "hero.date": "21 — 25 اکتوبر 2026",
     "hero.tagline": "آپ کی تشریف آوری کی دعوت دیتے ہیں",
     "mehndi.title": "مہندی",
-    "mehndi.date": "جمعہ، 30 اکتوبر 2026",
+    "mehndi.date": "بدھ، 21 اکتوبر 2026",
     "mehndi.time": "شام 7 بجے سے رات 10 بجے تک",
-    "mehndi.venue": "نارووال",
-    "mehndi.venue.a": "سارنگ پور",
+    "mehndi.venue": "گوجرانوالہ",
     "barat.title": "بارات",
-    "barat.date": "ہفتہ، 31 اکتوبر 2026",
-    "barat.time": "دوپہر 12 بجے سے شام 4 بجے تک",
-    "barat.venue": "جے ایم کے مارکی، نیو لاہور روڈ، نارووال",
+    "barat.date": "جمعہ، 23 اکتوبر 2026",
+    "barat.time": "دوپہر 1 بجے سے شام 4 بجے تک",
     "walima.title": "ولیمہ",
-    "walima.date": "اتوار، 1 نومبر 2026",
-    "walima.time": "دوپہر 12 بجے سے شام 4 بجے تک",
-    "walima.venue": "غوری مارکی، پسرور روڈ، چاونڈہ",
+    "walima.date": "اتوار، 25 اکتوبر 2026",
+    "walima.time": "شام 7 بجے سے رات 10 بجے تک",
+    "walima.venue": "الحمد مارکی، نوشہرہ سانسی، گوجرانوالہ",
+    "map.link": "مقام دیکھیں",
     "rsvp.text": "آپ کی شرکت ہمارے لیے باعثِ اعزاز ہوگی",
     "rsvp.button": "واٹس ایپ پر آر ایس وی پی بھیجیں",
-    "footer.text": "محبت کے ساتھ، سما اور اسد",
+    "footer.text": "محبت کے ساتھ، سائرہ اور اویس",
   },
 };
 
@@ -105,19 +103,15 @@ const translations = {
 //   ?M           -> Mehndi + Barat        (also ?e=M)
 //   ?W           -> Barat + Walima        (also ?e=W)
 //   ?M&W / ?MW   -> all three events      (also ?e=MW)
-//   ?A           -> Mehndi (venue: Sarangpur) + Barat; combine with W for all three
-//                   M and A are mutually exclusive: if both are given, M wins.
 // ---------------------------------------------------------------------------
 function readEventFlags() {
   const tokens = [];
   new URLSearchParams(window.location.search).forEach((value, key) => {
     if (["e", "events", "event"].includes(key.toLowerCase())) tokens.push(value);
-    else if (/^[mwa]+$/i.test(key)) tokens.push(key);
+    else if (/^[mw]+$/i.test(key)) tokens.push(key);
   });
   const letters = tokens.join("").toUpperCase();
-  const m = letters.includes("M");
-  const a = letters.includes("A") && !m;
-  return { mehndi: m || a, mehndiSarangpur: a, walima: letters.includes("W") };
+  return { mehndi: letters.includes("M"), walima: letters.includes("W") };
 }
 
 const SHOW = readEventFlags();
@@ -125,12 +119,6 @@ const SHOW = readEventFlags();
 (function applyEventVisibility() {
   document.querySelector('[data-event="mehndi"]').hidden = !SHOW.mehndi;
   document.querySelector('[data-event="walima"]').hidden = !SHOW.walima;
-
-  if (SHOW.mehndiSarangpur) {
-    document
-      .querySelector('[data-event="mehndi"] .tl-where')
-      .setAttribute("data-i18n", "mehndi.venue.a");
-  }
 
   const count = 1 + Number(SHOW.mehndi) + Number(SHOW.walima);
   const dateKey =
@@ -256,10 +244,10 @@ envelope.addEventListener("click", openInvitation);
 
 // ---------------------------------------------------------------------------
 // Countdown to the first event the guest is invited to
-// (Mehndi 30 Oct 7 PM PKT if shown, otherwise Barat 31 Oct 12 PM PKT)
+// (Mehndi 21 Oct 7 PM PKT if shown, otherwise Barat 23 Oct 1 PM PKT)
 // ---------------------------------------------------------------------------
 const countdownTarget = new Date(
-  SHOW.mehndi ? "2026-10-30T19:00:00+05:00" : "2026-10-31T12:00:00+05:00",
+  SHOW.mehndi ? "2026-10-21T19:00:00+05:00" : "2026-10-23T13:00:00+05:00",
 ).getTime();
 const cdEls = {
   d: document.getElementById("cdDays"),
