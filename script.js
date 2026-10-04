@@ -15,7 +15,7 @@ const translations = {
     "cover.label": "the wedding of",
     "cover.cue": "Tap the seal to open",
     "cover.invited": "You are invited",
-    "card.names": "Saira & Awais",
+    "card.names": "Awais & Saira",
     "cover.opening": "Opening your invitation...",
     "hero.date.w": "Sunday, 25 October 2026",
     "hero.date.bw": "23 — 25 October 2026",
@@ -41,10 +41,10 @@ const translations = {
     "mehndi.title": "Mehndi",
     "mehndi.date": "Wednesday, 21 October 2026",
     "mehndi.time": "7:00 PM – 10:00 PM",
-    "mehndi.venue": "Gujranwala",
+    "mehndi.venue": "Eman Palace, Muhammadi Town, Gujranwala",
     "barat.title": "Barat",
     "barat.date": "Friday, 23 October 2026",
-    "barat.time": "1:00 PM – 4:00 PM",
+    "barat.time": "1:00 AM",
     "walima.title": "Walima",
     "walima.date": "Sunday, 25 October 2026",
     "walima.time": "7:00 PM – 10:00 PM",
@@ -52,13 +52,13 @@ const translations = {
     "map.link": "View location",
     "rsvp.text": "We would be honoured to celebrate with you",
     "rsvp.button": "Send RSVP on WhatsApp",
-    "footer.text": "With love, Saira & Awais",
+    "footer.text": "With love, Awais & Saira",
   },
   ur: {
     "cover.label": "شادی کی دعوت",
     "cover.cue": "کھولنے کے لیے مہر کو چھوئیں",
     "cover.invited": "آپ مدعو ہیں",
-    "card.names": "سائرہ اور اویس",
+    "card.names": "اویس اور سائرہ",
     "cover.opening": "دعوت نامہ کھل رہا ہے...",
     "hero.date.w": "اتوار، 25 اکتوبر 2026",
     "hero.date.bw": "23 — 25 اکتوبر 2026",
@@ -84,10 +84,10 @@ const translations = {
     "mehndi.title": "مہندی",
     "mehndi.date": "بدھ، 21 اکتوبر 2026",
     "mehndi.time": "شام 7 بجے سے رات 10 بجے تک",
-    "mehndi.venue": "گوجرانوالہ",
+    "mehndi.venue": "ایمان پیلس، محمدی ٹاؤن، گوجرانوالہ",
     "barat.title": "بارات",
     "barat.date": "جمعہ، 23 اکتوبر 2026",
-    "barat.time": "دوپہر 1 بجے سے شام 4 بجے تک",
+    "barat.time": "رات 1 بجے",
     "walima.title": "ولیمہ",
     "walima.date": "اتوار، 25 اکتوبر 2026",
     "walima.time": "شام 7 بجے سے رات 10 بجے تک",
@@ -95,7 +95,7 @@ const translations = {
     "map.link": "مقام دیکھیں",
     "rsvp.text": "آپ کی شرکت ہمارے لیے باعثِ اعزاز ہوگی",
     "rsvp.button": "واٹس ایپ پر آر ایس وی پی بھیجیں",
-    "footer.text": "محبت کے ساتھ، سائرہ اور اویس",
+    "footer.text": "محبت کے ساتھ، اویس اور سائرہ",
   },
 };
 
@@ -245,11 +245,11 @@ envelope.addEventListener("click", openInvitation);
 
 // ---------------------------------------------------------------------------
 // Countdown to the first event the guest is invited to
-// (Mehndi 21 Oct 7 PM PKT, else Barat 23 Oct 1 PM PKT, else Walima 25 Oct 7 PM PKT)
+// (Mehndi 21 Oct 7 PM PKT, else Barat 23 Oct 1 AM PKT, else Walima 25 Oct 7 PM PKT)
 // ---------------------------------------------------------------------------
 const countdownTarget = new Date(
   SHOW.mehndi ? "2026-10-21T19:00:00+05:00"
-  : SHOW.barat ? "2026-10-23T13:00:00+05:00"
+  : SHOW.barat ? "2026-10-23T01:00:00+05:00"
   : "2026-10-25T19:00:00+05:00",
 ).getTime();
 const cdEls = {
